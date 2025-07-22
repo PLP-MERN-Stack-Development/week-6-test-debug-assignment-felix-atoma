@@ -1,0 +1,6 @@
+/* index.css or App.module.css (if it's truly global) */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}

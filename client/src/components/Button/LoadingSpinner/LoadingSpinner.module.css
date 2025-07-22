@@ -1,0 +1,68 @@
+/* src/components/LoadingSpinner/LoadingSpinner.module.css */
+.spinner {
+  display: inline-block;
+  position: relative;
+}
+
+.spinnerInner {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  animation: spinner-rotate 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-style: solid;
+}
+
+/* Sizes */
+.small {
+  width: 1rem;
+  height: 1rem;
+}
+
+.medium {
+  width: 2rem;
+  height: 2rem;
+}
+
+.large {
+  width: 3rem;
+  height: 3rem;
+}
+
+.small .spinnerInner {
+  border-width: 2px;
+}
+
+.medium .spinnerInner {
+  border-width: 3px;
+}
+
+.large .spinnerInner {
+  border-width: 4px;
+}
+
+/* Variants */
+.primary .spinnerInner {
+  border-color: #3498db transparent transparent transparent;
+}
+
+.secondary .spinnerInner {
+  border-color: #2ecc71 transparent transparent transparent;
+}
+
+.light .spinnerInner {
+  border-color: #f8f9fa transparent transparent transparent;
+}
+
+.dark .spinnerInner {
+  border-color: #343a40 transparent transparent transparent;
+}
+
+@keyframes spinner-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
