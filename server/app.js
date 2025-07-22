@@ -40,6 +40,12 @@ app.get('/api/health', (req, res) => {
 // API Routes - must come before error handlers
 app.use('/api/v1/auth', authRoutes);
 
+
+// ✅ Root route for Render to detect backend is live
+app.get('/', (req, res) => {
+  res.send('✅ Backend is live and running on Render');
+});
+
 // Error handlers (must come last)
 app.use(notFound);
 app.use(errorHandler);
